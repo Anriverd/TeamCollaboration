@@ -3,11 +3,11 @@ package utils;
 public class MainUtils {
     //Hello Git
 
-    public void coolMethod(){
+    public static void coolMethod(){
 
     }
 
-    public void otherCoolMethod(){
+    public static void otherCoolMethod(){
 
     }
 
