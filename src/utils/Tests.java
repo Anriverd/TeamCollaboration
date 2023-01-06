@@ -7,4 +7,9 @@ public class Tests {
     // TC145
 
     //working on TC124
+
+    // ...
+    public static void main(String[] args) {
+        MainUtils.coolMethod();
+    }
 }
