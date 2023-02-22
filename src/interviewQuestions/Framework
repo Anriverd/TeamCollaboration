@@ -1,0 +1,35 @@
+Tell me about your Framework:
+- Basically they want to hear how did you create and structured
+your project, and what did you use in it to make it functional,
+reusable, scalable etc.
+ - What tools we used in our project?
+ - Which programming language we used in our project?
+ - Which testing tools we used in our project?
+ - Which development approach we choose in our project?
+ - What kind of folder structure you created, and why?
+
+- "Maven"
+ Frameworks are basically commonly used, and proven approach of creating file and folder structure,
+ creating smart logic (implementing design patterns, utilities) to be able to easily handle and maintain our project.
+
+I use Java programming language for my automation codes, Selenium and JUnit for testing.
+
+To increase productivity and ease of maintainability we create a certain logic in our project structure.
+Every element and peace of code has its place in the structure. Under the project we have two important files,
+Configuration properties and pom.xml and src package. In pom.xml we have our dependencies, and to prevent hard
+coding and to have easy access to test data we use configuration.properties file.
+
+To achieve Behavior Driven Development we use Cucumber. We have 2 layers in our project: business and technical.
+ In business layer under the resources package with features package we have feature files.
+
+We create Scenarios using Gherkin language. The technical layer contains of step-definitions package, where we write
+the code for each Scenario step.
+
+Then for creating smart logic we have utilities package, where we store different types of utility classes such as Driver,
+BrowserUtils, ConfigurationReader. We implemented Singleton Design Pattern in the Driver class.
+
+Then we have package for our pages. Our framework is structured based on the POM Design Pattern where every page
+element go to one class for easier maintenance and to keep the code organized and clean.
+
+The last package is runners, which contains Cukes runner class where we run our tests and where we can control dryRun,
+tags, Cucumber HTML reports, in this class we connect our step-definitions and features packages.

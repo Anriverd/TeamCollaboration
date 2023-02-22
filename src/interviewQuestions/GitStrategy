@@ -1,0 +1,24 @@
+Git strategy:
+To avoid having conflicts at work with Git you have to follow these steps:
+1-    Before you start doing a new automation you need to update your LOCAL master so you should be on
+(Master, or main or develop or whatever your company call it), you fetch then you pull.
+
+2-    Now you are ready to start with your automation. You create a branch based on master.
+
+3-    You work on your branch and do all your automation. Then you commit your work.
+
+4-    Checkout and go back to your LOCAL master, then fetch and pull to get all updates from Remote master to your local master.
+
+5-    Check out and switch back to your branch that has all your automation and changes. But now your branch doesn’t
+ have the latest changes from your local master. To get all changes you write the following command in the terminal.
+git merge master
+
+6-    If a conflict was to happen it will happen now. The reason a conflict would happen is that someone else worked on
+the same files that you worked on (feature, step definition, pages or whatever) That doesn’t mean this person has done the
+same automation that you did. It almost never happen. Each person has their own user story to automate but you all share the same files. So DON’T EVER SAY THAT YOU COMPARE YOUR WORK WITH THEIR WORK AND SEE WHICH ONE IS BETTER. That is not the correct answer. The correct answer is that you merge their work and you then put your work under on new lines and that’s how you resolve the conflict.
+
+7-    The only time that a conflict for the same thing would happen is that when they find an element in pages and you
+did find the same element. In such case you see which locator is better. You shouldn’t have two locators for the same
+webElement but you can’t just delete their locator as it is not likely you both has the same name for that weElement exactly.
+
+8-    Once you are done and solve the conflicts if any happens, You create a pull request and ask your colleagues to review.
